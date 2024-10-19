@@ -6,7 +6,7 @@ In the good ole days before every calculator could generate a dynamic MAC addres
 Now we have stuff to do.  We can't be log stalking every ip address on our home networks.  There can be easily a hundred IoT devices on the average home network.
 I wrote this program because dynamic MAC addresses have taken the fun out of using Pi-hole and diligently observing what is doing what on your network.
 
-Visit site below and sign up for API key
+Visit site below and sign up for free API key
 https://macaddress.io/api
 
 Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from macaddress.io/api  
