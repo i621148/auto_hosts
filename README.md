@@ -9,7 +9,7 @@ I wrote this program because dynamic MAC addresses have taken the fun out of usi
 Visit site below and sign up for API key
 https://macaddress.io/api
 
-Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from macaddress.io/api
+Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from macaddress.io/api  
 os.environ['API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 Copy contents of hosts3.txt to your /etc/hosts file.
