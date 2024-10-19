@@ -12,8 +12,7 @@ https://macaddress.io/api
 Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from macaddress.io/api  
 os.environ['API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
-Copy contents of hosts3.txt to your /etc/hosts file.  
-You can also copy contents to /etc/pihole/local.list if you want the new alias to work on a network wide level.  
+Copy contents of hosts3.txt to your /etc/hosts file.   
 
 Pi-hole>Settings>Restart DNS resolver
 
