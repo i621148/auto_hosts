@@ -17,3 +17,7 @@ Copy contents of hosts3.txt to your /etc/hosts file.
 Pi-hole>Settings>Restart DNS resolver
 
 Enjoy!
+
+Tested with:
+Linux raspberrypi 5.10.103-v7+ #1529 SMP Tue Mar 8 12:21:37 GMT 2022 armv7l GNU/Linux
+Python 3.7.3
