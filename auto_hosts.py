@@ -87,7 +87,7 @@ for index, row in df2.iterrows():
 print('df2 after decoding')
 print(df2.to_markdown())
 
-# Write new /etc/hosts file for pihole
+# Store the results again
 print("Writing to file...")
 df2.to_csv('hosts1.txt', sep='\t', index=True)
 
@@ -98,6 +98,7 @@ file_path = 'hosts1.txt'
 df3 = pd.read_csv(file_path, sep='\t')
 print(df3)
 
+# This is not necasarry but didn't want to renumber below
 df4 = df3
 
 df5 = df4
@@ -134,14 +135,14 @@ df11['HardwareVendor'] = df11['HardwareVendor'].str.replace("-", "", regex=True)
 print('df11')
 print(df11.to_markdown())
 
-# Write new /etc/hosts file for pihole
+# Store the results again
 print("Writing to file...")
 df11.to_csv('hosts2.txt', sep='\t', index=False)
 
-# Clean data
+# Store the results in format /etc/hosts file for pihole will accept
 df12 = df11
 df12 = df12[['Address', 'HardwareVendor']]
 print("Writing to file...")
 df12.to_csv('hosts3.txt', sep='\t', index=False, header=False)
 
-print("Copy contents of hosts3.txt to your /etc/hosts file."
+print("Copy contents of hosts3.txt to your /etc/hosts file.")
