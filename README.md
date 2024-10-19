@@ -21,4 +21,8 @@ Enjoy!
 
 Tested with:  
 Linux raspberrypi 5.10.103-v7+ #1529 SMP Tue Mar 8 12:21:37 GMT 2022 armv7l GNU/Linux  
-Python 3.7.3
+Python 3.7.3  
+
+I am not affiliated with Pi-hole (https://pi-hole.net/) in any way other than being an enthusiastic user and enjoyer of their hard work.  
+I am not the creator or source of Pi-hole and my project is not approved, sponsored, or affiliated with Pi-hole or the community.  
+There is no commercial purpose behind the use of this project and I am not offering Pi-hole commercially under the same domain name.  
