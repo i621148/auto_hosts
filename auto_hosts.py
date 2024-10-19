@@ -98,7 +98,7 @@ file_path = 'hosts1.txt'
 df3 = pd.read_csv(file_path, sep='\t')
 print(df3)
 
-# This is not necasarry but didn't want to renumber below
+# This is not necassary but didn't want to renumber below
 df4 = df3
 
 df5 = df4
