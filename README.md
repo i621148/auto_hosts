@@ -12,6 +12,10 @@ https://macaddress.io/api
 Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from macaddress.io/api  
 os.environ['API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
+pip install -r .\requirements.txt
+
+Run auto_hosts.py
+
 Copy contents of hosts3.txt to your /etc/hosts file.   
 
 Pi-hole>Settings>Restart DNS resolver
