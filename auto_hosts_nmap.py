@@ -1,6 +1,7 @@
 # auto_hosts.py
 # Generates a /etc/hosts file using local MAC lookups, a custom vendor dictionary, 
 # and active network fingerprinting for unknown devices.
+# Appends the last octet of the IP address to ensure unique hostnames.
 
 import pandas as pd
 import subprocess
@@ -51,6 +52,9 @@ for index, row in df_clean.iterrows():
     mac_address = row['HWaddress']
     ip_address = row['Address']
     
+    # Extract the last octet of the IP address (e.g., '192.168.1.151' -> '151')
+    last_octet = ip_address.split('.')[-1]
+    
     # 1. MAC OUI Lookup
     try:
         raw_vendor = str(mac_db.lookup(mac_address))
@@ -64,7 +68,7 @@ for index, row in df_clean.iterrows():
     # 2. Apply Dictionary (Solution 1)
     if clean_vendor in DEVICE_DICTIONARY:
         base_name = DEVICE_DICTIONARY[clean_vendor]
-        hostname = f"{base_name}-{index}"
+        hostname = f"{base_name}-{last_octet}"
         print(f"[DICT MATCH] {ip_address} ({clean_vendor}) -> {hostname}")
         
     # 3. Active Fingerprinting (Solution 2 - Fallback for unknowns)
@@ -93,11 +97,11 @@ for index, row in df_clean.iterrows():
                 
         # Final Fallback if scanning fails
         if not hostname:
-            hostname = f"{clean_vendor}-{index}"
+            hostname = f"{clean_vendor}-{last_octet}"
             print(f"  -> Scan failed. Using fallback: {hostname}")
         else:
             # Ensure the scanned hostname is unique just in case
-            hostname = f"{hostname}-{index}" 
+            hostname = f"{hostname}-{last_octet}" 
             print(f"  -> Scan successful! Found: {hostname}")
 
     # Sanitize hostname for /etc/hosts (only alphanumeric and hyphens allowed)
