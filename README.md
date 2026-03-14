@@ -13,7 +13,9 @@ Replace                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your key from mac
 os.environ['API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
 
 Run auto_hosts.py
