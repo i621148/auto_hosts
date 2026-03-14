@@ -36,9 +36,9 @@ python3 auto_hosts.py
 
 2. Copy the contents of the newly generated `hosts_pihole.txt` to your `/etc/hosts` file.
 
-3. Restart your Pi-hole DNS resolver to apply the names:
-   * **GUI:** `Pi-hole > Settings > Restart DNS resolver`
-   * **CLI:** `pihole restartdns`
+3. Restart your Pi-hole service to apply the names. **Note: For Pi-hole v6+, the standard restart commands have changed.**
+   * **CLI (Recommended):** `sudo systemctl restart pihole-FTL`
+   * **GUI:** Go to `Settings > System`, toggle on **Expert Mode**, and select Restart FTL/DNS.
 
 Enjoy!
 
